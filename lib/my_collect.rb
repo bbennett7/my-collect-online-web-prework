@@ -1,16 +1,14 @@
-def my_collect(collection)
+def my_collect(array)
   if block_given?
-    i = 0 
-    
-    while i < collection.length 
-      new_collection = []
-      yield collection[i]
+    i = 0
+ 
+    while i < array.length
+      yield(array[i])
       i = i + 1
-      new_collection << a.values_at[i]
     end
-    
-    new_collection
+ 
+    array
   else
-    "Hey! No block was given!"
+    puts "Hey! No block was given!"
   end
 end
